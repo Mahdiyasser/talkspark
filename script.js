@@ -64,7 +64,7 @@ function renderCategoriesGrid() {
 
 function renderCategoryPreview() {
     const grid = document.getElementById('categoryPreviewGrid');
-    grid.innerHTML = categories.slice(0, 6).map(cat => {
+    grid.innerHTML = categories.slice(0, 8).map(cat => {
         const count = allPoints[cat.id] ? allPoints[cat.id].length : 0;
         return `
             <div class="category-card" data-category-id="${cat.id}" data-navigate="discover">
