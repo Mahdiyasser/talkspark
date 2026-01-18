@@ -14,4 +14,9 @@
   { "id": 13, "name": "Lifestyle & Ethics", "file": "lifestyle.json" },
   { "id": 14, "name": "Mythology & Folklore", "file": "mythology.json" },
   { "id": 15, "name": "Science & Chemistry", "file": "science.json" }
+  { "id": 16, "name": "Travel & Geography", "file": "travel.json" },
+  { "id": 17, "name": "Art & Creativity", "file": "art.json" },
+  { "id": 18, "name": "Culinology & Food Science", "file": "food.json" },
+  { "id": 19, "name": "Sports & Athletics", "file": "sports.json" },
+  { "id": 20, "name": "Linguistics & Communication", "file": "language.json" }
 ]
