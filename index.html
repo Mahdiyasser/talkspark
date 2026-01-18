@@ -1,0 +1,320 @@
+<!-- index.html - Part 1 of 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkSpark - Ignite Every Conversation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">TalkSpark</div>
+            <div class="nav-links">
+                <button class="nav-link active" data-tab="home">Home</button>
+                <button class="nav-link" data-tab="discover">Discover</button>
+                <button class="nav-link" data-tab="app">App</button>
+                <button class="nav-link" data-tab="api">API Builder</button>
+                <button class="nav-link" data-tab="docs">Docs</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- HOME TAB -->
+        <section class="tab active" id="home">
+            <div class="hero">
+                <h1 class="hero-title">Never Run Out of Things to Talk About</h1>
+                <p class="hero-subtitle">TalkSpark is your ultimate conversation companion. From deep philosophy to quirky facts, we've curated thousands of conversation starters across <span id="homeCategoryCount">15</span> unique categories to keep your discussions flowing.</p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" data-navigate="discover">Start Exploring</button>
+                    <button class="btn btn-secondary" data-navigate="app">Try the App</button>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-number" id="statCategories">15</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="statPoints">375</div>
+                    <div class="stat-label">Conversation Starters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3><span id="featureCategoryCount">15</span> Rich Categories</h3>
+                    <p>From Business to Space, Psychology to Mythology - we've got every conversation angle covered.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Curated Content</h3>
+                    <p>Every conversation starter is handpicked to spark genuine, engaging discussions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast API</h3>
+                    <p>Build your own apps with our flexible, developer-friendly API. Perfect for chatbots, party games, and more.</p>
+                </div>
+            </div>
+
+            <div class="search-reveal-section" id="searchRevealSection">
+                <h2>Find Your Perfect Topic</h2>
+                <div class="home-search-container">
+                    <input type="text" id="homeSearchInput" placeholder="Search topics, questions, or contexts...">
+                    <button class="search-btn" id="homeSearchBtn">Search</button>
+                </div>
+                <div class="home-search-results" id="homeSearchResults"></div>
+            </div>
+
+            <div class="story">
+                <h2>Our Story</h2>
+                <p>We built TalkSpark because we believe the best moments in life happen in conversation. Whether you're breaking the ice at a networking event, looking for dinner table topics, or building the next viral social app - great conversations start with a spark.</p>
+                <p>Our collection spans the profound and the playful, the controversial and the concrete. Every topic is designed to do one thing: get people talking.</p>
+                <p>With <span id="storyCategoryCount">15</span> carefully curated categories covering everything from ancient mythology to cutting-edge AI, from the mysteries of space to the quirks of human psychology - we've created the ultimate toolkit for meaningful dialogue.</p>
+            </div>
+
+            <div class="category-preview">
+                <h2>Explore Categories</h2>
+                <div class="category-preview-grid" id="categoryPreviewGrid"></div>
+            </div>
+        </section>
+
+        <!-- DISCOVER TAB -->
+        <section class="tab" id="discover">
+            <div class="discover-header">
+                <h1>Discover Topics</h1>
+                <p>Explore our collection of conversation starters</p>
+                <div class="discover-search">
+                    <input type="text" id="discoverSearchInput" placeholder="Search by topic, question, or context...">
+                    <button class="clear-search-btn" id="clearSearchBtn" style="display: none;">Clear</button>
+                </div>
+            </div>
+
+            <div class="categories-grid" id="categoriesGrid"></div>
+
+            <div class="points-view" id="pointsView" style="display: none;">
+                <button class="back-btn" id="backBtn">← Back to Categories</button>
+                <h2 id="categoryTitle"></h2>
+                <div class="category-search">
+                    <input type="text" id="categorySearchInput" placeholder="Search within this category...">
+                </div>
+                <div class="points-list" id="pointsList"></div>
+            </div>
+        </section>
+
+        <!-- APP TAB -->
+        <section class="tab" id="app">
+            <div class="app-header">
+                <h1>Conversation Generator</h1>
+                <p>Customize your conversation experience</p>
+            </div>
+
+            <div class="app-container">
+                <div class="app-card">
+                    <div class="app-options">
+                        <div class="option-section">
+                            <h3>Choose Categories</h3>
+                            <div class="category-pills" id="appCategoryPills"></div>
+                        </div>
+
+                        <div class="option-section">
+                            <h3>Conversation Type</h3>
+                            <div class="type-buttons">
+                                <button class="type-btn active" data-type="all">All Types</button>
+                                <button class="type-btn" data-type="fact">Facts</button>
+                                <button class="type-btn" data-type="question">Questions</button>
+                                <button class="type-btn" data-type="debate">Debates</button>
+                            </div>
+                        </div>
+
+                        <div class="option-section">
+                            <h3>Number of Topics</h3>
+                            <div class="number-selector">
+                                <button class="num-btn" data-num="1">1</button>
+                                <button class="num-btn active" data-num="3">3</button>
+                                <button class="num-btn" data-num="5">5</button>
+                                <button class="num-btn" data-num="10">10</button>
+                            </div>
+                        </div>
+
+                        <button class="generate-btn" id="generateBtn">Generate Topics</button>
+                    </div>
+
+                    <div class="app-results" id="appResults">
+                        <div class="results-placeholder">
+                            <div class="placeholder-icon">💬</div>
+                            <p>Click "Generate Topics" to get started!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- index.html - Part 2 of 2 -->
+        <!-- API TAB -->
+        <section class="tab" id="api">
+            <div class="api-header">
+                <h1>API Endpoint Builder</h1>
+                <p>Create custom API endpoints for your conversation starters</p>
+                <p><b>NOTE : The API will not work because this is being hosted on github and the api requires php</p>
+            </div>
+
+            <div class="api-builder">
+                <div class="builder-section">
+                    <h3>Endpoint Type</h3>
+                    <select id="endpointType" class="endpoint-select">
+                        <option value="random">Random from all categories</option>
+                        <option value="category">Random from specific category</option>
+                        <option value="categories">Random from multiple categories</option>
+                        <option value="specific">Specific point</option>
+                        <option value="points">Random from specific points in category</option>
+                        <option value="multi">Multiple categories with specific points</option>
+                        <option value="search">Search by keyword</option>
+                        <option value="search-cat">Search in specific category</option>
+                        <option value="search-multi">Search in multiple categories</option>
+                        <option value="multi-keyword">Multi-keyword search</option>
+                    </select>
+                </div>
+
+                <div class="builder-controls" id="apiBuilderControls"></div>
+
+                <div class="builder-output">
+                    <h3>Your Endpoint</h3>
+                    <div class="endpoint-display">
+                        <input type="text" id="endpointUrl" readonly>
+                        <button class="copy-btn" id="copyBtn">Copy</button>
+                    </div>
+                    <button class="test-btn" id="testBtn">Test Endpoint</button>
+                    <div class="test-result" id="testResult"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOCS TAB -->
+        <section class="tab" id="docs">
+            <div class="docs-content">
+                <h1>API Documentation</h1>
+                
+                <div class="doc-section">
+                    <h2>Getting Started</h2>
+                    <p>The TalkSpark API provides programmatic access to our entire collection of conversation starters. All responses are in JSON format.</p>
+                    <p><strong>Base URL:</strong> <code>/api/</code></p>
+                </div>
+
+                <div class="doc-section">
+                    <h2>Endpoints</h2>
+                    
+                    <div class="endpoint-doc">
+                        <h3>Random Topic</h3>
+                        <code>/?talk</code>
+                        <p>Returns a random conversation starter from any category.</p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Random from Category</h3>
+                        <code>/?c={category-id}</code>
+                        <p>Returns a random topic from the specified category.</p>
+                        <p><strong>Example:</strong> <code>/?c=9</code> (Business & Money)</p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Random from Multiple Categories</h3>
+                        <code>/?c={id1}&{id2}&{id3}</code>
+                        <p>Returns a random topic from the specified categories.</p>
+                        <p><strong>Example:</strong> <code>/?c=4&9&10</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Specific Point</h3>
+                        <code>/?c={category-id}&&p={point-id}</code>
+                        <p>Returns a specific conversation starter.</p>
+                        <p><strong>Example:</strong> <code>/?c=9&&p=5</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Random from Specific Points</h3>
+                        <code>/?c={category-id}&&p={id1}&{id2}&{id3}</code>
+                        <p>Returns a random topic from specific points within a category.</p>
+                        <p><strong>Example:</strong> <code>/?c=9&&p=1&5&10</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Multiple Categories with Specific Points</h3>
+                        <code>/?mc=yes&&c1={cat-id}&{p-id}&{p-id}&&c2={cat-id}&{p-id}</code>
+                        <p>Returns a random topic from specific points across multiple categories.</p>
+                        <p><strong>Example:</strong> <code>/?mc=yes&&c1=9&1&5&&c2=4&3&7</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Search All Categories</h3>
+                        <code>/?search={keyword}</code>
+                        <p>Searches all topics for the keyword in the name.</p>
+                        <p><strong>Example:</strong> <code>/?search=AI</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Search Specific Category</h3>
+                        <code>/?search={keyword}&&c={category-id}</code>
+                        <p>Searches topics within a specific category.</p>
+                        <p><strong>Example:</strong> <code>/?search=work&&c=9</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Search Multiple Categories</h3>
+                        <code>/?search={keyword}&&mc=yes&&c1={id}&&c2={id}</code>
+                        <p>Searches topics within multiple categories.</p>
+                        <p><strong>Example:</strong> <code>/?search=future&&mc=yes&&c1=5&&c2=10</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Multi-Keyword Search</h3>
+                        <code>/?search={keyword1}|{keyword2}|{keyword3}</code>
+                        <p>Searches for topics matching any of the keywords (OR search).</p>
+                        <p><strong>Example:</strong> <code>/?search=AI|robot|future</code></p>
+                    </div>
+
+                    <div class="endpoint-doc">
+                        <h3>Multi-Keyword Search in Categories</h3>
+                        <code>/?search={kw1}|{kw2}&&mc=yes&&c1={id}&&c2={id}</code>
+                        <p>Searches for multiple keywords within specific categories.</p>
+                        <p><strong>Example:</strong> <code>/?search=money|work&&mc=yes&&c1=9&&c2=13</code></p>
+                    </div>
+                </div>
+
+                <div class="doc-section">
+                    <h2>Response Format</h2>
+                    <p>All endpoints return JSON with the following structure:</p>
+                    <pre><code>{
+  "id": 1,
+  "name": "Topic Name",
+  "the-point": "The conversation starter or question",
+  "context": "Additional context",
+  "category": "Category Name",
+  "category_id": 1
+}</code></pre>
+                </div>
+
+                <div class="doc-section">
+                    <h2>Category IDs</h2>
+                    <ul id="categoryList"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 TalkSpark. Ignite every conversation.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

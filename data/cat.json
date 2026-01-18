@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "General Icebreakers", "file": "icebreakers.json" },
+  { "id": 2, "name": "Controversial Topics", "file": "controversial.json" },
+  { "id": 3, "name": "Interesting Facts", "file": "facts.json" },
+  { "id": 4, "name": "Deep Philosophy", "file": "philosophy.json" },
+  { "id": 5, "name": "Future & Technology", "file": "future_tech.json" },
+  { "id": 6, "name": "Pop Culture & Media", "file": "pop_culture.json" },
+  { "id": 7, "name": "Psychology & Behavior", "file": "psychology.json" },
+  { "id": 8, "name": "History & Mysteries", "file": "history.json" },
+  { "id": 9, "name": "Business & Money", "file": "business.json" },
+  { "id": 10, "name": "Space & Universe", "file": "space.json" },
+  { "id": 11, "name": "Health & Human Body", "file": "health.json" },
+  { "id": 12, "name": "Nature & Environment", "file": "nature.json" },
+  { "id": 13, "name": "Lifestyle & Ethics", "file": "lifestyle.json" },
+  { "id": 14, "name": "Mythology & Folklore", "file": "mythology.json" },
+  { "id": 15, "name": "Science & Chemistry", "file": "science.json" }
+]
